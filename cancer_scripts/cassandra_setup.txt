@@ -1,0 +1,13 @@
+create keyspace Cancer_App with replication = { 'class': 'SimpleStrategy', 'replication_factor': 3 } ;
+
+create table Cancer_App.cancer_data (
+    country varchar,
+    age varchar,
+    gender varchar,
+    cancer varchar,
+    deaths int,
+    crude_rate decimal,
+    asr decimal,
+    cumulative_risk decimal,
+    PRIMARY KEY ((age, gender), country, cancer)
+);

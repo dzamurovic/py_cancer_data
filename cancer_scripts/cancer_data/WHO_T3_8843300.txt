@@ -1,0 +1,35 @@
+Serbia (2003-2013)
+Female, age 60-69
+Cancer	Deaths	Crude rate	ASR (W)	Cumulative risk
+Nasopharynx (C11)	17	0.3	0.3	0.00
+Lip, oral cavity and pharynx (C00-14)	243	4.4	4.4	0.04
+Lip, oral cavity, pharynx, larynx and oesophagus (C00-15,C32)	487	8.8	8.7	0.09
+Oesophagus (C15)	133	2.4	2.4	0.02
+Stomach (C16)	1067	19.2	19.0	0.20
+Intestine (C17-21)	2688	48.5	47.8	0.49
+Colon, rectum and anus (C18-21)	2636	47.6	46.9	0.48
+Colon (C18)	1447	26.1	25.7	0.27
+Rectum and anus (C19-21)	1189	21.4	21.1	0.22
+Liver (C22)	860	15.5	15.3	0.16
+Liver and biliary passages (C22-24)	1432	25.8	25.5	0.26
+Gallbladder (C23-24)	572	10.3	10.2	0.11
+Pancreas (C25)	1218	22.0	21.7	0.22
+Larynx (C32)	111	2.0	2.0	0.02
+Lung (C33-34)	3672	66.2	65.9	0.67
+Melanoma of skin (C43)	232	4.2	4.1	0.04
+Mesothelioma (C45)	32	0.6	0.6	0.01
+Breast (C50)	4336	78.2	77.8	0.78
+Cervix uteri (C53)	1148	20.7	20.7	0.21
+Uterus (C53-55)	2093	37.8	37.6	0.38
+Corpus uteri (C54)	565	10.2	10.1	0.10
+Ovary (C56)	1222	22.0	21.9	0.22
+Kidney (C64)	300	5.4	5.3	0.06
+Bladder (C67)	276	5.0	4.9	0.05
+Brain, central nervous system (C70-72)	957	17.3	17.1	0.17
+Thyroid (C73)	107	1.9	1.9	0.02
+Hodgkin lymphoma (C81)	51	0.9	0.9	0.01
+Non-Hodgkin lymphoma (C82-85,C96)	386	7.0	6.9	0.07
+Multiple myeloma (C88+C90)	273	4.9	4.9	0.05
+Leukaemia (C91-95)	523	9.4	9.3	0.10
+All cancers (C00-97,B21)	23538	424.6	420.7	4.21
+All cancers but lung (C00-97/C33-34)	19866	358.4	354.8	3.57

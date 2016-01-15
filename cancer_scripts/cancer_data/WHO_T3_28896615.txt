@@ -1,0 +1,32 @@
+Serbia (2003-2013)
+Male, age 50-59
+Cancer	Deaths	Crude rate	ASR (W)	Cumulative risk
+Nasopharynx (C11)	77	1.1	1.1	0.01
+Lip, oral cavity and pharynx (C00-14)	1377	20.1	19.7	0.20
+Lip, oral cavity, pharynx, larynx and oesophagus (C00-15,C32)	3100	45.3	44.3	0.45
+Oesophagus (C15)	654	9.6	9.4	0.10
+Stomach (C16)	1283	18.8	18.4	0.19
+Intestine (C17-21)	2277	33.3	32.3	0.33
+Colon, rectum and anus (C18-21)	2231	32.6	31.6	0.33
+Colon (C18)	1097	16.0	15.5	0.16
+Rectum and anus (C19-21)	1134	16.6	16.1	0.17
+Liver (C22)	788	11.5	11.2	0.12
+Liver and biliary passages (C22-24)	938	13.7	13.3	0.14
+Gallbladder (C23-24)	150	2.2	2.1	0.02
+Pancreas (C25)	1143	16.7	16.2	0.17
+Larynx (C32)	1069	15.6	15.2	0.16
+Lung (C33-34)	10255	149.9	146.1	1.49
+Melanoma of skin (C43)	344	5.0	5.0	0.05
+Mesothelioma (C45)	49	0.7	0.7	0.01
+Prostate (C61)	385	5.6	5.3	0.06
+Testis (C62)	35	0.5	0.5	0.01
+Kidney (C64)	486	7.1	7.0	0.07
+Bladder (C67)	484	7.1	6.9	0.07
+Brain, central nervous system (C70-72)	950	13.9	13.7	0.14
+Thyroid (C73)	56	0.8	0.8	0.01
+Hodgkin lymphoma (C81)	73	1.1	1.1	0.01
+Non-Hodgkin lymphoma (C82-85,C96)	369	5.4	5.3	0.05
+Multiple myeloma (C88+C90)	201	2.9	2.9	0.03
+Leukaemia (C91-95)	524	7.7	7.5	0.08
+All cancers (C00-97,B21)	24960	364.9	355.7	3.58
+All cancers but lung (C00-97/C33-34)	14705	215.0	209.6	2.13
