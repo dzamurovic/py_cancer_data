@@ -31,7 +31,7 @@ class CassandraRepo:
             crude_rate = cancer_data_record.crude_rate
             asr = cancer_data_record.crude_rate
             cumulative_risk = cancer_data_record.cumulative_risk
-            #print(age + " " + gender + " " + country+ " " + cancer + " " + str(deaths) + " " + str(crude_rate) + " " + str(asr) + " " + str(cumulative_risk))
             batch.add(insert_statement, (age, gender, country, cancer, asr, crude_rate, cumulative_risk, deaths))
 
         session.execute(batch)
+
