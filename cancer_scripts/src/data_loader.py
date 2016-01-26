@@ -1,5 +1,6 @@
 import os
 import cancer_data_file_mapper
+import processing
 from persistence import CassandraRepo
 from cancer_data_model import CancerData
 
@@ -31,9 +32,16 @@ class DataLoader:
     def _persist_data(self, data_group_info, record_data):
         return None
 
+    def load_cancer_data(self):
+        cassandra_repo = CassandraRepo()
+        return cassandra_repo.load_all()
+
 
 def main():
     data_loader = DataLoader()
-    data_loader.process_directory()
+    #data_loader.process_directory()
+
+    processor = processing.DataProcessor()
+    processor.do_the_thing(data_loader.load_cancer_data())
 
 main()
