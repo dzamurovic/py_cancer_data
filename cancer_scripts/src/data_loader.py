@@ -6,16 +6,16 @@ from cancer_data_model import CancerData
 
 class DataLoader:
 
-    def __init__(self):
+    def __init__(self, repository):
         self.data_dir = '../cancer_data'
+        self._repository = repository
 
     def process_directory(self):
         data_files = os.listdir(self.data_dir)
-        cassandra_repo = CassandraRepo()
 
         for f in data_files:
             cancer_data = self._process_data_file(os.path.join(os.path.abspath(self.data_dir), f))
-            cassandra_repo.store(cancer_data)
+            self._repository.store_cancer_data(cancer_data)
 
 
     def _process_data_file(self, file):
@@ -33,15 +33,15 @@ class DataLoader:
         return None
 
     def load_cancer_data(self):
-        cassandra_repo = CassandraRepo()
-        return cassandra_repo.load_all()
+        return self._repository.load_all()
 
 
 def main():
-    data_loader = DataLoader()
+    cassandraRepository = CassandraRepo()
+    data_loader = DataLoader(cassandraRepository)
     #data_loader.process_directory()
 
-    processor = processing.DataProcessor()
-    processor.do_the_thing(data_loader.load_cancer_data())
+    processor = processing.DataProcessor(cassandraRepository)
+    processor.process_cancer_data(data_loader.load_cancer_data())
 
 main()

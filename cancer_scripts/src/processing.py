@@ -1,7 +1,11 @@
 import numpy as np
 import pandas as pd
+import persistence
 
 class DataProcessor:
+
+    def __init__(self, repository):
+        self._cassandraRepo = repository
 
     def _group_and_sort(self, df, groupBy, sortBy):
         df_clean = df[~df.cancer.str.startswith("All")]
@@ -23,18 +27,23 @@ class DataProcessor:
         return df_dict
     """
 
-    def do_the_thing(self, toProcess):
+    def process_cancer_data(self, toProcess):
         variables = toProcess[0].keys()
         df = pd.DataFrame([[getattr(i,j) for j in variables] for i in toProcess], columns = variables)
 
         df_deaths = self._group_and_sort(df[['cancer', 'deaths']], ['cancer'], 'deaths')
         df_deaths.to_csv('deaths.tsv', sep='\t')
+        self._cassandraRepo.store_cancer_deaths_data(df_deaths)
 
-        df_deaths_by_gender = self._group_and_sort(df[['gender', 'cancer', 'deaths']], ['gender'], 'deaths')
+        df_deaths_by_gender = self._group_and_sort(df[['gender', 'cancer', 'deaths']], ['gender', 'cancer'], 'deaths')
         df_deaths_by_gender.to_csv('deaths_by_gender.tsv', sep='\t')
+        self._cassandraRepo.store_cancer_gender_deaths_data(df_deaths_by_gender)
 
-        df_deaths_by_age = self._group_and_sort(df[['age', 'cancer', 'deaths']], ['age'], 'deaths')
+
+        df_deaths_by_age = self._group_and_sort(df[['age', 'cancer', 'deaths']], ['age', 'cancer'], 'deaths')
         df_deaths_by_age.to_csv('deaths_by_age.tsv', sep='\t')
+        self._cassandraRepo.store_cancer_age_deaths_data(df_deaths_by_age)
 
         df_cumulative_risk = self._group_and_sort(df[['age', 'gender', 'cancer', 'cumulative_risk']], ['age', 'gender', 'cancer'], 'cumulative_risk')
         df_cumulative_risk.to_csv('cumulative_risk.tsv', sep='\t')
+        self._cassandraRepo.store_cancer_age_gender_risk_data(df_cumulative_risk)
